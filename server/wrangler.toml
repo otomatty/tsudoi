@@ -1,7 +1,7 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "tsudoi-server"
 main = "src/index.ts"
-compatibility_date = "2024-09-19"
+compatibility_date = "2024-09-09"
 compatibility_flags = ["nodejs_compat"]
 
 
@@ -11,9 +11,8 @@ workers_dev = true
 [env.production]
 workers_dev = false
 
-[[vars]]
+[vars]
 SUPABASE_URL = "https://geyvxypcyshjunconxlz.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdleXZ4eXBjeXNoanVuY29ueGx6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY3NTg0MjksImV4cCI6MjA0MjMzNDQyOX0.o6IQXWIOXVK-7giR4xQE9n8yu_wFLFF2l5777YiCazY"
 
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Worker, running it closer to your back-end infrastructure
@@ -48,9 +47,9 @@ SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJ
 # Bind a D1 database. D1 is Cloudflare’s native serverless SQL database.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#d1-databases
 # [[d1_databases]]
-# binding = "MY_DB"
-# database_name = "my-database"
-# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+# binding = "DB"
+# database_name = "tsudoi-db"
+# database_id = "YOUR_DATABASE_ID"
 
 # Bind a dispatch namespace. Use Workers for Platforms to deploy serverless functions programmatically on behalf of your customers.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#dispatch-namespace-bindings-workers-for-platforms

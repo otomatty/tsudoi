@@ -10,7 +10,7 @@ export const sitePages = {
   LoginPage: lazy(() => import("./pages/site/Login/LoginPage")),
   SignupPage: lazy(() => import("./pages/site/Signup/SignupPage")),
   ForgotPasswordPage: lazy(
-    () => import("./pages/site/Forgot-password/ForgotPasswordPage")
+    () => import("./pages/site/ForgotPassword/ForgotPasswordPage")
   ),
   HelpPage: lazy(() => import("./pages/site/Help/HelpPage")),
   GettingStartedPage: lazy(
@@ -58,4 +58,14 @@ export const adminPages = {
     () => import("./pages/admin/Appearance/AdminAppearancePage")
   ),
   AdminHelpPage: lazy(() => import("./pages/admin/Help/AdminHelpPage")),
+};
+
+export const appPages = {
+  ProfileSettingsPage: lazy(
+    () => import("./pages/app/ProfileSettings/ProfileSettingsPage")
+  ),
+};
+
+export const authPages = {
+  CallbackPage: lazy(() => import("./pages/auth/Callback")),
 };
